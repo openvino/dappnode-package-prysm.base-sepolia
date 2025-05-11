@@ -1,0 +1,20 @@
+services:
+  prysm:
+    build: .
+    image: prysm.base-sepolia.dnp.dappnode.eth
+    container_name: prysm.base-sepolia
+    restart: always
+    ports:
+      - "4000:4000"
+      - "13000:13000"
+      - "3500:3500" # optional GRPC gateway
+    volumes:
+      - prysm_data:/data
+      - jwt_secret:/data/jwt.hex
+    depends_on:
+      - reth
+
+volumes:
+  prysm_data:
+  jwt_secret:
+

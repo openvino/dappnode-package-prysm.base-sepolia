@@ -1,0 +1,10 @@
+{
+  "name": "prysm.base-sepolia.dnp.dappnode.eth",
+  "version": "0.1.0",
+  "description": "Prysm beacon node for Base Sepolia",
+  "type": "service",
+  "author": "Mike Bravo",
+  "license": "MIT",
+  "image": "prysm.base-sepolia.dnp.dappnode.eth"
+}
+
