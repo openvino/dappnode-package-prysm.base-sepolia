@@ -1,6 +1,19 @@
 services:
+  reth:
+    image: ghcr.io/openvino/base-sepolia:latest
+    container_name: reth
+    restart: always
+    networks:
+      - base-sepolia-test
+    ports:
+      - "8545:8545"
+      - "8551:8551"
+      - "6060:6060"
+      - "30303:30303"
+    volumes:
+      - jwt_shared:/data/jwt.hex
+
   prysm:
-    build: .
     image: ghcr.io/openvino/prysm.base-sepolia:latest
     container_name: prysm.base-sepolia
     restart: always
@@ -10,13 +23,13 @@ services:
       - "3500:3500" # optional GRPC gateway
     volumes:
       - prysm_data:/data
-      - ../docker-base-sepolia/jwt.hex:/data/jwt.hex
+      - jwt_shared:/data/jwt.hex
 
 volumes:
+  jwt_shared:
   prysm_data:
 
 networks:
-  default:
-    external:
-      name: base-sepolia-test
+  base-sepolia-test:
+    external: true
 
