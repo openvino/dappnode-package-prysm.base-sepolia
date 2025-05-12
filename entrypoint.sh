@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Starting Prysm beacon chain for Base Sepolia..."
-exec beacon-chain \
+exec /beacon-chain \
   --sepolia \
   --datadir=/data \
   --execution-endpoint=http://reth:8551 \
