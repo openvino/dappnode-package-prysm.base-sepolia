@@ -1,7 +1,7 @@
 services:
   prysm:
     build: .
-    image: ghcr.io/openvino/dappnode-package-prysm.base-sepolia:latest
+    image: ghcr.io/openvino/prysm.base-sepolia:latest
     container_name: prysm.base-sepolia
     restart: always
     ports:
