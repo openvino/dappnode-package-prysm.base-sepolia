@@ -11,7 +11,7 @@ services:
       - "6060:6060"
       - "30303:30303"
     volumes:
-      - jwt_shared:/data/jwt.hex
+      - docker-base-sepolia_jwt_shared:/jwt:ro
 
   prysm:
     image: ghcr.io/openvino/prysm.base-sepolia:latest
