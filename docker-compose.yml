@@ -26,8 +26,9 @@ services:
       - docker-base-sepolia_jwt_shared:/jwt:ro
 
 volumes:
-  jwt_shared:
   prysm_data:
+  docker-base-sepolia_jwt_shared:
+    external: true
 
 networks:
   base-sepolia-test:
