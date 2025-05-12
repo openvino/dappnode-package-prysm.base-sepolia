@@ -23,7 +23,7 @@ services:
       - "3500:3500" # optional GRPC gateway
     volumes:
       - prysm_data:/data
-      - jwt_shared:/data/jwt.hex
+      - docker-base-sepolia_jwt_shared:/jwt:ro
 
 volumes:
   jwt_shared:
