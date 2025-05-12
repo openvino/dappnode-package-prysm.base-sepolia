@@ -10,11 +10,13 @@ services:
       - "3500:3500" # optional GRPC gateway
     volumes:
       - prysm_data:/data
-      - jwt_secret:/data/jwt.hex
-    depends_on:
-      - reth
-
+      - jwt_secret:../docker-base-sepolia/jwt.hex/jwt.hex
 volumes:
   prysm_data:
   jwt_secret:
+
+networks:
+  default:
+    external:
+      name: base-sepolia-test
 
