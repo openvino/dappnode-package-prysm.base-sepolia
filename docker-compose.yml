@@ -10,6 +10,8 @@ services:
     volumes:
       - prysm_data:/data
       - docker-base-sepolia_jwt_shared:/jwt:ro
+    extra_hosts:
+      - "reth:172.28.0.3"
 
 volumes:
   prysm_data:
@@ -19,4 +21,3 @@ volumes:
 networks:
   base-sepolia-test:
     external: true
-
