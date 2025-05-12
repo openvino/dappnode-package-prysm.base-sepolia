@@ -1,18 +1,4 @@
 services:
-  reth:
-    image: ghcr.io/openvino/base-sepolia:latest
-    container_name: reth
-    restart: always
-    networks:
-      - base-sepolia-test
-    ports:
-      - "8545:8545"
-      - "8551:8551"
-      - "6060:6060"
-      - "30303:30303"
-    volumes:
-      - docker-base-sepolia_jwt_shared:/jwt:ro
-
   prysm:
     image: ghcr.io/openvino/prysm.base-sepolia:latest
     container_name: prysm.base-sepolia
