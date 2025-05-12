@@ -9,5 +9,5 @@ exec /beacon-chain \
   --accept-terms-of-use \
   --rpc-host=0.0.0.0 \
   --grpc-gateway-host=0.0.0.0 \
-  --genesis-beacon-api-url=https://ethereum-sepolia-beacon-api.publicnode.com \
-  --checkpoint-sync-url=https://ethereum-sepolia-beacon-api.publicnode.com 
+  --genesis-beacon-api-url=https://sepolia.beaconstate.info\
+  --checkpoint-sync-url=https://sepolia.beaconstate.info
