@@ -11,7 +11,7 @@ services:
       - prysm_data:/data
       - docker-base-sepolia_jwt_shared:/jwt:ro
     extra_hosts:
-      - "reth:172.28.0.3"
+      - "reth:172.27.0.2"
 
 volumes:
   prysm_data:
