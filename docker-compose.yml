@@ -1,7 +1,7 @@
 services:
   prysm:
     build: .
-    image: prysm.base-sepolia.dnp.dappnode.eth
+    image: ghcr.io/openvino/dappnode-package-prysm.base-sepolia:latest
     container_name: prysm.base-sepolia
     restart: always
     ports:
@@ -10,10 +10,10 @@ services:
       - "3500:3500" # optional GRPC gateway
     volumes:
       - prysm_data:/data
-      - jwt_secret:../docker-base-sepolia/jwt.hex/jwt.hex
+      - ../docker-base-sepolia/jwt.hex:/data/jwt.hex
+
 volumes:
   prysm_data:
-  jwt_secret:
 
 networks:
   default:
